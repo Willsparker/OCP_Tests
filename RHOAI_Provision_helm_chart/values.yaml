@@ -1,0 +1,23 @@
+---
+config:
+  requireAiPipelines: true         # Installs Red Hat Openshift Pipelines Operator
+  requireGpuSupport: true          # Installs GPU operator + Node Feature Discovery operator
+  dataScienceClusterName: rhods    # Name of the RHODS DataScienceCluster
+
+    # Enabling the following on first installation causes issues (no DataScienceCluster CRD).
+    # After helm install, enable this option and upgrade the helm chart, and it will be deployed!  
+  createDataScienceCluster: true  # Create RHODS DataScienceCluster 
+
+operators:
+  nfd: # Node Feature Discovery
+    installPlanApproval: Automatic
+    installChannel: stable
+  nvidiaGpu: # Nvidia GPU Operator
+    installPlanApproval: Automatic
+    installChannel: v23.9
+  pipelines: # Red Hat Openshift Pipelines Operator
+    installPlanApproval: Automatic
+    installChannel: latest
+  rhods: # Red Hat Openshift Data Science
+    installPlanApproval: Automatic
+    installChannel: stable

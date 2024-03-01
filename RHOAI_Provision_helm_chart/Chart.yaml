@@ -1,0 +1,5 @@
+apiversion: v2
+name: rhoai
+description: A helm chart to deploy components of RHOAI
+type: application
+version: 0.0.1
