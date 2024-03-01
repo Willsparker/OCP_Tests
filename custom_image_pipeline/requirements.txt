@@ -1,0 +1,8 @@
+seaborn==0.13.2
+cx_Oracle==8.3.0
+altair==5.2.0
+lightgbm==4.3.0
+imblearn==0.0
+h5py==3.10.0
+nltk==3.8.1
+tensorflow==2.15.0
