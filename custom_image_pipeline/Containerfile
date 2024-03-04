@@ -1,7 +1,8 @@
 ARG now
 ARG ubi_version
 
-FROM quay.io/opendatahub/workbench-images:jupyter-datascience-ubi${ubi_version}-python-3.${ubi_version}-${now}
+# FROM quay.io/opendatahub/workbench-images:jupyter-datascience-ubi${ubi_version}-python-3.${ubi_version}-${now}
+FROM quay.io/opendatahub/workbench-images:jupyter-datascience-ubi9-python-3.9-20240301
 
 COPY requirements.txt /tmp/requirements.txt
 
