@@ -67,6 +67,6 @@ The difficulty I found was attempting to extract the information required for th
 
 ### Helpful Links for development:
 
-- Tekton Triggers and CEL interception
+- [Tekton Triggers and CEL interception](https://bigkevmcd.github.io/kubernetes/tekton/pipeline/2020/02/05/cel-interception.html)
 
-- OpenShift Pipelines Advanced Triggers Part 1 - Triggering Different Project Builds in the Same Repository
+- [OpenShift Pipelines Advanced Triggers Part 1 - Triggering Different Project Builds in the Same Repository](https://www.redhat.com/en/blog/openshift-pipelines-advanced-triggers-part-1-triggering-different-project-builds-in-the-same-repository)
