@@ -18,7 +18,17 @@ spec:
     datasciencepipelines:
       managementState: {{ if .Values.config.requireAiPipelines }} Managed {{ else }} Removed {{ end }}
     kserve:
+      {{- if .Values.config.requireSingleModelServing }}
       managementState: Managed
+      serving:
+        ingressGateway:
+          certificate:
+            type: SelfSigned
+        managementState: Managed
+        name: knative-serving
+      {{- else }}
+      managementState: Removed
+      {{- end }}
     modelmeshserving:
       managementState: Managed
     ray:

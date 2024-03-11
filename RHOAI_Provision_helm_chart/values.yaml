@@ -2,11 +2,12 @@
 config:
   requireAiPipelines: true         # Installs Red Hat Openshift Pipelines Operator
   requireGpuSupport: true          # Installs GPU operator + Node Feature Discovery operator
+  requireSingleModelServing: true  # Installs Serverless Operator + SMesh Operator
   dataScienceClusterName: rhods    # Name of the RHODS DataScienceCluster
 
     # Enabling the following on first installation causes issues (no DataScienceCluster CRD).
     # After helm install, enable this option and upgrade the helm chart, and it will be deployed!  
-  createDataScienceCluster: true  # Create RHODS DataScienceCluster 
+  createDataScienceCluster: true   # Create RHODS DataScienceCluster 
 
 operators:
   nfd: # Node Feature Discovery
@@ -19,5 +20,11 @@ operators:
     installPlanApproval: Automatic
     installChannel: latest
   rhods: # Red Hat Openshift Data Science
+    installPlanApproval: Automatic
+    installChannel: stable
+  serverless: # Red Hat Openshift Serverless
+    installPlanApproval: Automatic
+    installChannel: stable
+  servicemesh: # Red Hat Openshift Service Mesh
     installPlanApproval: Automatic
     installChannel: stable
